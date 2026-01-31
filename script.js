@@ -1,5 +1,5 @@
-let computerChoice={0:'res/RR.png',1:'res/RP.png',2:'res/RS.png'}
-let userChoice={0:'res/LR.png',1:'res/LP.png',2:'res/LS.png'}
+let computerChoice={0:'RR.png',1:'RP.png',2:'RS.png'}
+let userChoice={0:'LR.png',1:'LP.png',2:'LS.png'}
 let choice={0:'Rock',1:'Paper',2:'Scissor'}
 let currUserChoice='';
 let currComputerChoice='';
@@ -97,4 +97,5 @@ function calcute(){
 
 document.getElementById('restart').addEventListener("click",()=>{
     window.location='index.html';
+
 })
