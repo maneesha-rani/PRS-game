@@ -1,0 +1,234 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+.content-container{
+    width: 85vw;
+    /* height: 85vh; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    padding: 1rem 5rem;
+}
+.screen-holder{
+    display: flex;
+    justify-content: center;
+}
+#screen{
+    width: 20vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    border: 5px double white;
+}
+.hands-holder{
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+.hands{
+    height: 18vh;
+    width: 20vw;
+    text-align: center;
+}
+.hand-id{
+    position: relative;
+    top: 1rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+.hand-img{
+    height: 90%;
+    width: 90%;
+}
+@keyframes xa{
+    0%{
+        transform: rotate(-10deg);
+    }
+    25%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+    75%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.choice-holder{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.choice-holder h3{
+    text-align: center;
+}
+.choice-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 0rem 15rem;
+}
+.options{
+    padding: 1rem;
+    background-color: rgba(210, 208, 208, 0.823);
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+.options:hover{
+    transform: scale(1.1);
+}
+.options:active{
+    background-color: rgba(210, 208, 208, 0.532);
+    transform: scale(0.95);
+}
+.opt-img{
+    height: 100px;
+    width: 80px;
+}
+.opt-name{
+    font-size: 1.3rem;
+}
+.choice-extras{
+    display: flex;
+    justify-content: space-around;
+    /* padding-top: 2rem; */
+}
+#player-start,#restart{
+    padding: 1rem 3rem;
+    border: 2px solid #fff;
+    background-color: #000;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#player-start:active,#restart:active{
+    background-color: #fff;
+    color:#000;
+    transform: scale(0.98);
+}
+.score{
+    position: absolute;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    top: 1rem;
+    right: 5rem;
+}
+#t1{
+    width: 100vw;
+    overflow: auto;
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 0;
+    left: -48vw;
+    font-size: 1.2rem;
+    height: 2rem;
+    align-content: center;
+}
+#t2{
+    width: 100vw;
+    overflow: auto;
+    position: absolute;
+    transform: rotate(90deg);
+    top: 0;
+    left: 47vw;
+    height: 2rem;
+    font-size: 1.2rem;
+    align-content: center;
+}
+
+@keyframes shake-animation {
+    20%{
+        transform: translateX(-1vw);
+    }
+    40%{
+        transform: translateX(1vw);
+    }
+    60%{
+        transform: translateX(-1vw);
+    }
+    80%{
+        transform: translateX(1vw);
+    }
+}
+.shake-class{
+    animation: shake-animation 0.8s linear;
+}
+
+@media screen and (max-width: 512px) {
+    body{
+        min-height:915px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        overflow: hidden;
+    }
+    .choice-container{
+        padding: 0rem 0rem;
+    }
+    .opt-img{
+        height: 50px;
+        width: 40px;
+    }
+    .opt-name{
+        font-size: 0.8rem;
+    }
+    #t1,#t2{
+        display: none;
+    }
+    .score{
+        left: 1rem;
+        position: relative;
+        width: inherit;
+    }
+    .sub-score{
+        display: flex;
+        justify-content:space-around ;
+    }
+    .score h4{
+        font-size: 14px;
+        width: auto;
+        text-align: center;
+    }
+    .score h5{
+        font-size: 12px;
+    }
+    #player-start{
+        padding: 0.5rem 1rem;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+    #restart{
+        padding: 0.5rem 1.5rem;
+    }
+    #screen{
+        width: 50vw;
+        height:5vh;
+        font-size: 1rem;
+    }
+    .hands-holder{
+        padding: 1rem 1rem;
+    }
+    .hands{
+        height:12vh;
+        width: 40vw;
+    }
+    .content-container{
+        padding: 0rem 0rem;
+    }
+    
+    /* 412 x 915 */
+}

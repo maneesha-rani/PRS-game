@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissor-Battle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content-container">
+        <div class="screen-holder">
+            <div id="screen">
+                Ready
+            </div>
+        </div>
+        
+        <div class="hands-holder">
+            <div class="hands">
+                <img src="LR.png" alt="user hand" id="user-hand" class="hand-img">
+                <figcaption class="hand-id">you</figcaption>
+            </div>
+            <div class="hands">
+                <img src="RR.png" alt="machine hand" id="machine-hand" class="hand-img">
+                <figcaption class="hand-id">computer</figcaption>
+            </div>
+        </div>
+        <div class="score">
+            <h4>Scores</h4>
+            <div class="sub-score">
+                <h5>player : <span id="player-score"></span></h5>
+                <h5>computer : <span id="computer-score"></span></h5>    
+            </div>
+            <br><br>
+            <button id="restart">Restart</button>
+        </div>
+        <div class="choice-holder">
+            <h3>YOUR CHOICE </h3>
+            <div class="choice-container">
+                <div class="options" onclick="choose(0)">
+                    <img src="opt-1.png" alt="rock-img" class="opt-img">
+                    <figcaption class="opt-name">rock</figcaption>
+                </div>
+                <div class="options" onclick="choose(1)">
+                    <img src="opt-2.png" alt="paper-img" class="opt-img">
+                    <figcaption class="opt-name">paper</figcaption>
+                </div>
+                <div class="options" onclick="choose(2)">
+                    <img src="opt-3.png" alt="scissor-img" class="opt-img">
+                    <figcaption class="opt-name">scissors</figcaption>
+                </div>
+            </div>
+            <div class="choice-extras">
+                <h4>current choice : <span id="user-choice">&emsp14;</span></h4>
+                <button id="player-start" onclick="myfun()">START</button>
+            </div>
+        </div>
+    </div>
+    
+    <marquee id="t1" behavior="right" direction="" truespeed scrolldelay="40" >Rock Paper scissors &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;Rock Paper scissors &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;Rock Paper scissors &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;Rock Paper scissors &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;Rock Paper scissors &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;Rock Paper scissors &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;Rock Paper scissors </marquee>
+    <marquee id="t2" behavior="" direction="" truespeed scrolldelay="40">Rock Paper scissors &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;Rock Paper scissors &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;Rock Paper scissors &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;Rock Paper scissors &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;Rock Paper scissors &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;Rock Paper scissors &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;Rock Paper scissors </marquee>
+    <script src="script.js"></script>
+</body>
+</html>
