@@ -15,8 +15,8 @@ let computerScore=0;
 function myfun(){
     if(u && c){
         calcute();
-        document.getElementById('user-hand').src='res/LR.png';
-        document.getElementById('machine-hand').src='res/RR.png';
+        document.getElementById('user-hand').src='LR.png';
+        document.getElementById('machine-hand').src='RR.png';
         document.getElementById('user-hand').style.transform='rotate(-10deg)';
         document.getElementById('machine-hand').style.transform='rotate(-10deg)';
         document.getElementById('screen').innerHTML='Rock';
@@ -99,3 +99,4 @@ document.getElementById('restart').addEventListener("click",()=>{
     window.location='index.html';
 
 })
+
